@@ -3,9 +3,6 @@ import Card from "./Card";
 import ImgDefault from "../assets/img/movidb_default.jpg";
 import NotFound from "./NotFound";
 
-// https://api.themoviedb.org/3/search/movie?api_key={process.env.REACT_APP_MOVIE_API_KEY}&query=Jack+Reacher
-
-// {options ? options.map((movie) => <p>{movie.original_title}</p>) : null}
 function GetData() {
   const [film, setFilm] = useState();
   const [filmTitle, setFilmTitle] = useState("Jack+Reacher");
@@ -16,15 +13,11 @@ function GetData() {
   const imglinkDefault = ImgDefault;
 
   useEffect(() => {
-    //   const headers = { "Content-Type": "application/json" };
     const data = fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${filmTitle}`
-      // ,{ headers }
     )
       .then((resp) => resp.json())
       .then((result) => setFilm(result));
-    // const resp = data.json().then(setOptions(data.results));
-    //   console.log(options);
   }, [filmTitle]);
   return (
     <div className="container">
