@@ -3,6 +3,13 @@ import Card from "./Card";
 import ImgDefault from "../assets/img/movidb_default.jpg";
 import NotFound from "./NotFound";
 
+function TransformSearch(text) {
+  let textTrans = text.split(" ");
+  textTrans = textTrans.join("+");
+  return textTrans;
+}
+// setSearch(e.target.value)
+
 function GetData() {
   const [film, setFilm] = useState();
   const [filmTitle, setFilmTitle] = useState("Jack+Reacher");
@@ -22,7 +29,13 @@ function GetData() {
   return (
     <div className="container">
       <div className="search">
-        <input type="text" onChange={(e) => setSearch(e.target.value)} />
+        <input
+          type="text"
+          onChange={(e) => {
+            setSearch(TransformSearch(String(e.target.value)));
+          }}
+          placeholder="text search..."
+        />
 
         <i
           className="fab fa-searchengin white-s"
