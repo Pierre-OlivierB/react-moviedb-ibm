@@ -1,5 +1,6 @@
 import React from "react";
 
+// * get infos of card by props from MovieDb component
 function Card(props) {
   const srcimg = props.src;
   const title = props.title;

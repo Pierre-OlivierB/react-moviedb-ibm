@@ -14,6 +14,10 @@ https://www.themoviedb.org/?language=fr
 
 => REACT_APP_MOVIE_API_KEY
 
+### On Vs Code : [plugin]
+
+#### Better Comments (Aaron Bond)
+
 ## Special Thanks to:
 
 Ibm Academie

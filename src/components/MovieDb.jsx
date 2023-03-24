@@ -3,22 +3,30 @@ import Card from "./Card";
 import ImgDefault from "../assets/img/movidb_default.jpg";
 import NotFound from "./NotFound";
 
+// ! string treatment to correspon for api search
 function TransformSearch(text) {
   let textTrans = text.split(" ");
   textTrans = textTrans.join("+");
   return textTrans;
 }
 // setSearch(e.target.value)
-
+// ! all reflexion
 function GetData() {
+  // * api state response
   const [film, setFilm] = useState();
+  // * name user search
   const [filmTitle, setFilmTitle] = useState("Jack+Reacher");
+  // * input user
   const [search, setSearch] = useState("");
 
+  // * my api in .env
   const api_key = process.env.REACT_APP_MOVIE_API_KEY;
+  // * img src api basic
   const imglink = "https://image.tmdb.org/t/p/w500/";
+  // * img by default
   const imglinkDefault = ImgDefault;
 
+  //  * On change filmTitle : show  api response
   useEffect(() => {
     const data = fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${filmTitle}`
