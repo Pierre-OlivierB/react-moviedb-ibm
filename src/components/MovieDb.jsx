@@ -65,7 +65,7 @@ function GetData() {
         <p className="in-charge">Chargement...</p>
       )}
 
-      {console.log(film ? film.results : null)}
+      {/* {console.log(film ? film.results : null)} */}
     </div>
   );
 }

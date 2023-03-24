@@ -14,8 +14,7 @@ function Cards() {
   useEffect(() => {
     fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%20of%20thr", infos)
       .then((response) => response.json())
-      .then((result) => setOptions(result))
-      .then(console.log(options));
+      .then((result) => setOptions(result));
   }, []);
 
   return (
