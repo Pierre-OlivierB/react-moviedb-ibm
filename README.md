@@ -1,6 +1,10 @@
-# Project React - First Step with API DbMovie
+# V 1.0 : Project React - First Step with API DbMovie
 
 https://www.themoviedb.org/?language=fr
+
+## Search Capacity :
+
+Film title in english (only)
 
 ## Components functional :
 
