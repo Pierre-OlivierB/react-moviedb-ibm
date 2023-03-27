@@ -138,6 +138,8 @@ h1 {
   position: absolute;
   padding: 16px;
   width: 100%;
+  max-height: 230px;
+  text-overflow: hidden;
   opacity: 0;
   top: 0;
   color: hsl(27, 85%, 90%);
@@ -227,6 +229,20 @@ h1 {
 input::selection {
   background-color: hsl(27, 85%, 84%);
   color: hsl(0, 0%, 10%);
+}
+.line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie div p {
+  display: -webkit-box;
+  width: 250px;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @keyframes chargein {
   from {

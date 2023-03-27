@@ -36,19 +36,21 @@ function GetData() {
   }, [filmTitle]);
   return (
     <div className="container">
-      <div className="search">
-        <input
-          type="text"
-          onChange={(e) => {
-            setSearch(TransformSearch(String(e.target.value)));
-          }}
-          placeholder="text search..."
-        />
+      <div className="line">
+        <div className="search">
+          <input
+            type="text"
+            onChange={(e) => {
+              setSearch(TransformSearch(String(e.target.value)));
+            }}
+            placeholder="text search..."
+          />
 
-        <i
-          className="fab fa-searchengin white-s"
-          onClick={() => setFilmTitle(search)}
-        />
+          <i
+            className="fab fa-searchengin white-s"
+            onClick={() => setFilmTitle(search)}
+          />
+        </div>
       </div>
 
       {film ? (
