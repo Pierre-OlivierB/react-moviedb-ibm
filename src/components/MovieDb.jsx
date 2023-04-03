@@ -32,7 +32,8 @@ function GetData() {
       `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${filmTitle}`
     )
       .then((resp) => resp.json())
-      .then((result) => setFilm(result));
+      .then((result) => setFilm(result))
+      .then(console.log(film));
   }, [filmTitle]);
   return (
     <div className="container">
@@ -68,6 +69,7 @@ function GetData() {
               title={el.title}
               year={el.release_date}
               cont={el.overview}
+              idMovie={el.id}
             />
           ))
         )
